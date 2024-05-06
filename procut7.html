@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        /* Basic CSS Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+        /* .container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+    padding-left: 15px;
+    padding-right: 15px;
+} */
+
+        .prod1 {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px; 
+    padding-left: 15px;
+    padding-right: 15px;
+}
+        
+
+        .prod1-row {
+            margin-bottom: 30px;
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .prod1-col1 {
+            width: 50%;
+
+
+        }
+
+        .prod1-col2 {
+            width: 50%;
+        }
+
+        /* .prod1-col1 h1 {
+            box-shadow: 0px 0px 4px 0px solid red;
+            font-size: 32px;
+            margin-bottom: 20px;
+        } */
+
+        .heading {
+            position: relative;
+            font-size: 33px;
+
+        }
+
+        .heading::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 1px;
+            background-color: rgb(240, 198, 11);
+            width: 25px;
+            top: 40px;
+            height: 4px;
+
+        }
+
+        /* h1 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        } */
+
+        .head3 {
+
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        ul {
+            margin-bottom: 15px;
+        }
+
+        ul li {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        .prod1-row2 {
+            width: 85%;
+            margin: auto;
+        }
+
+        .hydrlic-row {
+            display: flex;
+            align-items: center;
+   
+        }
+
+        .hydraulic-col1 {
+            display: flex;
+            gap: 30px;
+            
+
+
+        }
+
+        .iconserch {
+            display: flex;
+            gap: 30px;
+            margin-top: 10px;
+        }
+
+        .hydraulic-icon i {
+
+            font-size: 40px;
+            margin-top: 5px;
+            color: black;
+            border-radius: 50%;
+            padding: 8px;
+            background-color: rgb(240, 198, 11);
+
+
+
+        }
+/* 
+        .hydraulic-col2,
+        .hydraulic-col3,
+        .hydraulic-col4 {
+            flex: 1;
+        } */
+
+        .hydraulic-col2 h3,
+        .hydraulic-col3 h3,
+        .hydraulic-col4 h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .hydraulic-col2 h4,
+        .hydraulic-col3 h4,
+        .hydraulic-col4 h4 {
+            font-size: 16px;
+        }
+
+        .product-carousel {
+            padding: .3em .3em 0;
+            background: rgb(240, 240, 240);
+            text-align: center;
+        }
+
+        .product-carousel div {
+            position: relative;
+            margin-bottom: .3em;
+            padding-top: 56.25%;
+        }
+
+        .product-carousel iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-carousel span {
+            display: inline-block;
+            word-spacing: 1em;
+            overflow: auto;
+            white-space: nowrap;
+            word-wrap: normal;
+
+        }
+
+        .product-carousel a {
+            position: relative;
+            display: inline-block;
+            max-width: 120px;
+            width: 25%;
+            border: 1px solid blue;
+            opacity: .7;
+            text-decoration: none;
+        }
+
+        .product-carousel a:visited,
+        .product-carousel a:nth-of-type(1) {
+            border-color: #555;
+        }
+
+        .product-carousel a:hover {
+            opacity: 1;
+        }
+
+        .product-carousel a:not(:active):focus {
+            pointer-events: none;
+        }
+
+        .product-carousel a::before {
+            content: "";
+            position: absolute;
+            top: 0em;
+            right: 0em;
+            bottom: 0em;
+            left: 0em;
+            background: rgba(0, 0, 1, .1);
+            transition: background 0s 9999999s;
+        }
+
+        .product-carousel a:nth-of-type(1)::before {
+            background: rgba(255, 255, 254, .7);
+        }
+
+        .product-carousel span:active a::before {
+            background: rgba(0, 0, 0, 0);
+            transition: background 0s;
+        }
+
+        .product-carousel span:active a:active::before {
+            background: rgba(255, 255, 255, .7);
+            transition: background 0s;
+        }
+
+        .product-carousel img {
+            max-width: 100%;
+            vertical-align: middle;
+        }
+
+        .footer {
+            margin-top: 50px;
+            height: 600px;
+            background-color: rgb(206, 206, 206);
+            position: relative;
+        }
+
+        .footer::after {
+            position: absolute;
+            content: "";
+            bottom: 2px;
+            background-color: rgb(240, 198, 11);
+            width: 100%;
+            height: 4px;
+        }
+
+        .product-footer-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .prd-foot-row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* gap: 120px; */
+        }
+
+        .company-foot {
+            margin-top: -60px;
+        }
+
+        .Investors-foot {
+            margin-top: -120px;
+        }
+
+        .prd-foot-col {
+            /* margin-top: 30px; */
+            flex: 1;
+        }
+
+        .prd-foot-col ul {
+            margin-top: 10px;
+        }
+
+        .prd-foot-col ul li {
+            margin-top: 10px;
+            list-style-type: none;
+        }
+
+        .company-foot {
+            margin-left: 40px;
+        }
+
+        .Investors-foot {
+            margin-left: 40px;
+        }
+
+        .news-foot {
+            margin-left: 40px;
+        }
+
+        .product-foot {
+            margin-left: 40px;
+        }
+
+        .main-foot {
+            display: flex;
+        }
+
+        .foot-icon {
+            margin-top: 30px;
+            padding-left: 40px;
+            font-size: 35px;
+        }
+
+        .foot-2-container {
+            width: 85%;
+            margin: auto;
+            position: relative;
+        }
+
+        .foot-2-container::after {
+            content: "";
+            position: absolute;
+            bottom: 3px;
+            background-color: rgb(228, 224, 224);
+            width: 100%;
+            height: 1px;
+        }
+
+        .foot-2-row {
+            padding: 25px;
+        }
+
+        .foot-2-col {
+            display: flex;
+        }
+
+        .head2 {
+            margin-top: 20px;
+            margin-left: 10px;
+        }
+
+        .prd1 {
+            margin-top: 40px;
+            margin-left: -17.5%;
+        }
+
+        .prd1 ul li {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+
+        .prd1 ul a {
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+        }
+
+        .prd2 {
+            margin-top: 40px;
+            margin-left: 15%;
+
+        }
+
+        .prd2 ul li {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+
+        .prd2 ul a {
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+        }
+
+        .prd3 {
+            margin-top: 40px;
+            margin-left: 15%;
+        }
+
+        .prd3 ul li {
+            list-style-type: none;
+            margin-top: 15px;
+        }
+
+        .prd3 ul a {
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+        }
+
+        .prd4 {
+            margin-top: 40px;
+            margin-left: 15%;
+        }
+
+        .prd4 ul li {
+            list-style-type: none;
+        }
+
+        .prd4 ul a {
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+        }
+
+        .foot-3-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .foot-3-col {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 60px;
+            font-size: 15px;
+        }
+
+        .para-1 a {
+            text-decoration: none;
+            color: rgb(17, 17, 17);
+        }
+
+        .para-1 {
+            margin-left: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="prod1">
+        <div class="prod1-row">
+            <div class="prod1-col1">
+
+                <h1 class="heading">Activation</h1>
+
+                <h3 class="head3">About Activation</h3>
+                <p>Activations, pivotal in industrial contexts, initiate crucial processes and operations efficiently. They encompass various types, including manual, automatic, electric, pneumatic, or hydraulic mechanisms. Utilizing switches, sensors, control panels, PLCs, or relays, they detect and respond to specific conditions.</p>
+                <h3>Product Offerings</h3>
+                <ul>
+                    <li>Activations are used to start or trigger processes, operations, or machinery within industrial systems.</li>
+                    <li> They come in different forms, such as manual switches, automatic sensors, electric buttons, pneumatic cylinders, or hydraulic valves.
+                    </li>
+                    <li>Activations involve various components like switches, sensors, control panels, PLCs, or relays, depending on the application and system requirements.</li>
+                    
+                </ul>
+                <h3>Why Activation</h3>
+                <p>Activations, essential in industries, initiate processes efficiently. They include manual switches, automatic sensors, electric buttons, pneumatic cylinders, or hydraulic valves. Utilizing various components, they ensure timely and accurate operation of equipment.</p>
+            </div>
+            <div class="prod1-col2">
+                <div class="product-carousel">
+                    <div>
+                        <iframe src="images/product.jpeg" allowfullscreen frameborder="0" name="slider1"></iframe>
+                    </div>
+                    <span>
+                        <a href="images/product.jpeg" target="slider1"><img src="images/product.jpeg"></a>
+                        <a href="images/img.jpeg" target="slider1"><img src="images/img.jpeg"></a>
+                        <a href="images/product.jpeg" target="slider1"><img src="images/product.jpeg"></a>
+                    </span>
+                </div>
+            </div>
+    </section>
+
+    <section class="prod1-row2">
+        <div class="hydrlic-row">
+            <div class="hydraulic-col1">
+                <!-- <div class="iconserch">
+                    <div class="hydraulic-icon">
+                        <i class='bx bx-desktop'></i>
+                    </div>
+                    <div class="hydraulic-h3">
+                        <h3>Visit Website:</h3>
+                        <h4>Hydraulic Pumps</h4>
+                    </div>
+                </div> -->
+                <div class="iconserch">
+                    <div class="hydraulic-icon">
+                        <i class='bx bxs-cog'></i>
+                    </div>
+                    <div class="hydraulic-h3">
+                        <h3>Industries:</h3>
+                        <h4>Industrial/OEM</h4>
+                    </div>
+                    <div class="iconserch">
+                        <div class="hydraulic-icon">
+                            <i class='bx bx-desktop'></i>
+                        </div>
+                        <div class="hydraulic-h3">
+                            <h3>Countries Of Use:</h3>
+                            <h4>Global</h4>
+                        </div>
+                        <div class="iconserch">
+                            <div class="hydraulic-icon">
+                                <i class='bx bx-desktop'></i>
+                            </div>
+                            <div class="hydraulic-h3">
+                                <h3>Distribution Channels:</h3>
+                                <h4>B2B (Direct)</h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="footer">
+        <section class="product-footer-container">
+            <div class="prd-foot-row">
+                <div class="prd-foot-col">
+                    <h3 class="company-foot">Company</h3>
+                    <ul>
+                        <li>Strategy</li>
+                        <li>Governance</li>
+                        <li>History</li>
+                        <li>TROK Foundation</li>
+                        <li>Code Of Conduct</li>
+                        <li>Sustainability</li>
+                        <li>Innovation</li>
+                        <li>Global Locations</li>
+                        <li>Visitors Center & Museum</li>
+                    </ul>
+                </div>
+                <div class="prd-foot-col">
+                    <h3 class="Investors-foot">Investors</h3>
+                    <ul>
+                        <li>Stock Information</li>
+                        <li>Financial Information</li>
+                        <li>Shareholder Services</li>
+                        <li>Events & Presentations</li>
+                        <li>Quarterly Financial Results</li>
+                        <li>Annual Report & Sustainability Report</li>
+                        <li>SEC Filings</li>
+                        <li>Governance</li>
+                    </ul>
+                </div>
+                <div class="prd-foot-col">
+                    <h3 class="news-foot">News</h3>
+                    <ul>
+                        <li>News & Features</li>
+                        <li>Corporate Press Releases</li>
+                        <li>Media Information</li>
+                        <li>Social Media</li>
+                        <li>TROK FAQs</li>
+                    </ul>
+                    <h3 class="news-foot">Careers</h3>
+                    <ul>
+                        <li>Why TROK?</li>
+                        <li>Career Areas</li>
+                        <li>Diversity & Inclusion</li>
+                        <li>Search & Apply</li>
+                        <li>Candidate Login</li>
+                    </ul>
+
+                </div>
+                <div class="prd-foot-col">
+                    <h3 class="product-foot">Working Together</h3>
+                    <ul>
+                        <li>Employees</li>
+                        <li>Retirees & Alumni</li>
+                        <li>Sponsorships</li>
+                        <li>Suppliers</li>
+                        <li>Caterpillar Ventures</li>
+                        <li>Licensing</li>
+                    </ul>
+                    <h3 class="product-foot">TROK Products & Services</h3>
+                    <ul>
+                        <li>Products</li>
+                        <li>Parts</li>
+                        <li>Support</li>
+                        <li>Merchandise</li>
+                        <li>Locate A Dealer</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="main-foot">
+                <div class="foot-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                        <path fill="#7688e5"
+                            d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4m2.274 6.634h-1.443c-.171 0-.361.225-.361.524V8.6h1.805l-.273 1.486H10.47v4.461H8.767v-4.461H7.222V8.6h1.545v-.874c0-1.254.87-2.273 2.064-2.273h1.443z" />
+                    </svg>
+                </div>
+                <div class="foot-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                        <path fill="#5164c8"
+                            d="M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4M7.65 13.979H5.706V7.723H7.65zm-.984-7.024c-.614 0-1.011-.435-1.011-.973c0-.549.409-.971 1.036-.971s1.011.422 1.023.971c0 .538-.396.973-1.048.973m8.084 7.024h-1.944v-3.467c0-.807-.282-1.355-.985-1.355c-.537 0-.856.371-.997.728c-.052.127-.065.307-.065.486v3.607H8.814v-4.26c0-.781-.025-1.434-.051-1.996h1.689l.089.869h.039c.256-.408.883-1.01 1.932-1.01c1.279 0 2.238.857 2.238 2.699z" />
+                    </svg>
+                </div>
+                <div class="foot-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                        <path fill="#e64162"
+                            d="M11.603 9.833L9.357 8.785C9.161 8.694 9 8.796 9 9.013v1.974c0 .217.161.319.357.228l2.245-1.048c.197-.092.197-.242.001-.334M10 .4C4.698.4.4 4.698.4 10s4.298 9.6 9.6 9.6s9.6-4.298 9.6-9.6S15.302.4 10 .4m0 13.5c-4.914 0-5-.443-5-3.9s.086-3.9 5-3.9s5 .443 5 3.9s-.086 3.9-5 3.9" />
+                    </svg>
+                </div>
+                <div class="foot-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                        <path fill="#e93ada"
+                            d="M13 10a3 3 0 1 1-6 0c0-.171.018-.338.049-.5H6v3.997c0 .278.225.503.503.503h6.995a.503.503 0 0 0 .502-.503V9.5h-1.049c.031.162.049.329.049.5m-3 2a2 2 0 1 0-.001-4.001A2 2 0 0 0 10 12m2.4-4.1h1.199a.301.301 0 0 0 .301-.3V6.401a.301.301 0 0 0-.301-.301H12.4a.301.301 0 0 0-.301.301V7.6c.001.165.136.3.301.3M10 .4A9.6 9.6 0 0 0 .4 10a9.6 9.6 0 0 0 9.6 9.6a9.6 9.6 0 0 0 9.6-9.6A9.6 9.6 0 0 0 10 .4m5 13.489C15 14.5 14.5 15 13.889 15H6.111C5.5 15 5 14.5 5 13.889V6.111C5 5.5 5.5 5 6.111 5h7.778C14.5 5 15 5.5 15 6.111z" />
+                    </svg>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="foot-2">
+        <section class="foot-2-container">
+            <div class="foot-2-row">
+                <div class="foot-2-col">
+                    <h4 class="head2">Hydro TROK Brands</h4>
+                    <div class="prd1">
+                        <ul>
+                            <a href="#">
+                                <li>Hydraulic pumps</li>
+                            </a>
+                            <a href="#">
+                                <li>Valves</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="prd2">
+                        <ul>
+                            <a href="#">
+                                <li>Power Packs</li>
+                            </a>
+                            <a href="#">
+                                <li>Fittings</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="prd3">
+                        <ul>
+                            <a href="#">
+                                <li>Intersial Valves</li>
+                            </a>
+                            <a href="#">
+                                <li>Control Works</li>
+                            </a>
+                        </ul>
+                    </div>
+                    <div class="prd4">
+                        <ul>
+                            <a href="#">
+                                <li>Activation</li>
+                            </a>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="foot-3">
+        <section class="foot-3-container">
+            <div class="foot-3-row">
+                <div class="foot-3-col">
+                    <div class="para-1">
+                        <a href="#"> Contact | Site Map | Accessibility | Cookie Settings | Do Not Sell Or Share My
+                            Personal
+                            Information | Legal | Privacy </a>
+                    </div>
+                    <div class="para-2">
+                        © 2024 Hydro TROK. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>

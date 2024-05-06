@@ -1,0 +1,959 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History </title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+            padding: auto;
+            margin: auto;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            position: relative;
+            z-index: 1000;
+        }
+
+        .home {
+            position: relative;
+            z-index: 1;
+        }
+
+        .navigation {
+            margin-bottom: 50px;
+        }
+
+        .nav-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .navbar {
+            padding: 10px;
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-link {
+            cursor: pointer;
+            margin-top: 30px;
+            display: flex;
+        }
+
+        .nav-link ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .nav-link ul li {
+            padding: 10px;
+            gap: 5px;
+        }
+
+        .image-logo img {
+            width: 50%;
+            padding: 20px;
+        }
+
+        .dropdown-row {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .dropdown-row ul li {
+            list-style: none;
+        }
+
+        .nav-link:hover+.dropdown-row,
+        .dropdown-row:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 20px;
+        }
+
+        .drop-col1 {
+            display: flex;
+            gap: 15px;
+        }
+
+
+        .drop-col li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row2 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row2,
+        .dropdown-row2:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col2 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .drop-rcol {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col2 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row3 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row3,
+        .dropdown-row3:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col3 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .drop-rocol {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col3 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger3 {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row4 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row4,
+        .dropdown-row4:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col4 {
+            display: flex;
+            gap: 30px;
+        }
+
+        .drop-rowcol {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col4 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger4 {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .dropdown-row5 {
+            display: none;
+            position: absolute;
+            margin-top: 80px;
+            margin-left: 20%;
+            width: 60%;
+            height: 35%;
+            background-color: white;
+        }
+
+        .nav-link:hover+.dropdown-row5,
+        .dropdown-row5:hover {
+            display: block;
+            flex-wrap: wrap;
+        }
+
+        .drop-col5 {
+            display: flex;
+            gap: 40px;
+        }
+
+        .drop-row1col {
+            position: relative;
+            margin-bottom: 20px;
+            width: 100%;
+            background-color: white;
+            padding: 30px;
+        }
+
+        .drop-col5 li {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .nav-link li .dropdown-trigger5 {
+            visibility: visible;
+            height: auto;
+            overflow: visible;
+        }
+
+        .search {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .inputbox {
+            position: relative;
+            margin-right: 10px;
+            gap: 60px;
+
+        }
+
+        .inputbox input[type="text"] {
+            padding-right: 30px;
+            width: 200px;
+
+        }
+
+        .search-icon {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        .addto-cat {
+            cursor: pointer;
+        }
+
+
+        #history-background {
+            background: linear-gradient(to right, rgb(14, 14, 14), transparent), url("images/background.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            width: 100%;
+            margin-top: -50px;
+        }
+
+        #history-background p {
+            padding: 130px 90px;
+            color: azure;
+            font-size: 30px;
+            z-index: 1;
+        }
+
+        #history-header-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        #history-header-container h1 {
+            font-size: 60px;
+            position: relative;
+            /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+            font-stretch: semi-condensed;
+            padding: 35px 0px;
+        }
+
+        h1::before {
+            content: "";
+            width: 43px;
+            height: 6px;
+            background-color: #ffcd11;
+            position: absolute;
+            left: 0px;
+            top: 83%;
+        }
+
+        #history-header-container p {
+            /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+            padding: 3px 0px;
+        }
+
+        #history-content-container {
+            width: 85%;
+            margin: auto;
+            padding: 40px 0px;
+        }
+
+        #history-content-row {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        #history-content-col1 {
+            width: 50%;
+        }
+
+        #history-content-col2 {
+            width: 50%;
+        }
+
+        #history-content-col3 {
+            width: 50%;
+        }
+
+        #history-content-col4 {
+            width: 50%;
+        }
+
+        .content-para {
+            padding: 50px;
+        }
+
+        /* .content-para h2 {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+        } */
+
+        .content-para p {
+            /* font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+            padding: 10px 0px;
+            font-size: 15px;
+        }
+
+        .history-btn1 {
+            width: 200px;
+            height: 35px;
+            padding: 5px 0px;
+            margin: 10px 0px;
+            background-color: #ffcd11;
+            border: transparent;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .history-btn2 {
+            width: 200px;
+            height: 35px;
+            padding: 5px 0px;
+            margin: 10px 0px;
+            background-color: #ffcd11;
+            border: transparent;
+            border-radius: 5px;
+            float: right;
+            font-weight: bold;
+        }
+
+        .history-btn1:hover,
+        .history-btn2:hover {
+            background-color: #454545;
+            color: white;
+            border: solid 2px;
+            border-color: black;
+        }
+
+        @media (min-width:320px) {
+            #history-header-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-header-container h1 {
+                font-size: 28px;
+            }
+
+            #history-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #history-content-col1 {
+                width: 100%;
+            }
+
+            #history-content-col2 {
+                width: 100%;
+            }
+
+            #history-content-col3 {
+                width: 100%;
+            }
+
+            #history-content-col4 {
+                width: 100%;
+            }
+
+            .content-para {
+                width: 100%;
+                margin: auto;
+            }
+        }
+
+        @media (min-width: 760px) {
+            #history-header-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-header-container h1 {
+                font-size: 28px;
+            }
+
+            #history-background {
+                width: 50%;
+                background-size: cover;
+            }
+
+            #history-content-container {
+                width: 90%;
+                margin: auto;
+            }
+
+            #history-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #history-content-col1 {
+                width: 100%;
+            }
+
+            #history-content-col2 {
+                width: 100%;
+            }
+
+            #history-content-col3 {
+                width: 100%;
+            }
+
+            #history-content-col4 {
+                width: 100%;
+            }
+        }
+
+        @media (min-width: 1020px) {
+            #history-header-container {
+                width: 85%;
+                margin: auto;
+            }
+
+            #history-header-container h1 {
+                font-size: 60px;
+            }
+
+            #history-background {
+                background: linear-gradient(to right, rgb(14, 14, 14), transparent), url("images/background.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                width: 100%;
+            }
+
+            /* #history-background{
+                width: 50%;
+                background-size: cover;
+            } */
+            #history-content-container {
+                width: 85%;
+                margin: auto;
+            }
+
+            #history-content-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            #history-content-col1 {
+                width: 50%;
+            }
+
+            #history-content-col2 {
+                width: 50%;
+            }
+
+            #history-content-col3 {
+                width: 50%;
+            }
+
+            #history-content-col4 {
+                width: 50%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="navigation">
+        <div class="nav-container">
+            <nav class="navbar">
+                <div class="image-logo">
+                    <img src="images/logo.jpeg">
+                </div>
+                <div class="nav-link">
+                    <ul>
+                        <li class="dropdown-trigger">COMPANY</li>
+                        <li class="dropdown-trigger2">BRANDS</li>
+                        <li class="dropdown-trigger3">INVESTORS</li>
+                    </ul>
+                </div>
+
+                <div class="dropdown-row" id="dropdown-row1">
+                    <div class="drop-col">
+                        <h2>Company</h2><br>
+                        <hr>
+                        <div class="drop-col1">
+                            <ul>
+                                <li>Strategy & Purpose</li>
+                                <li>Governance</li>
+                                <li>History</li>
+                            </ul>
+                            <ul>
+                                <li>Caterpillar Foundation</li>
+                                <li>Code of Conduct </li>
+                                <li>Sustainability</li>
+                            </ul>
+                            <ul>
+                                <li>Diversity & Inclusion</li>
+                                <li>Innovation</li>
+                                <li>Political Engagement</li>
+                            </ul>
+                            <ul>
+                                <li>Global Locations</li>
+                                <li>Visitors Center & Museum</li>
+                                <li>Working Together</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dropdown-row2" id="dropdown-row2">
+                    <div class="drop-rcol">
+                        <h2>Brands</h2><br>
+                        <hr>
+                        <div class="drop-col2">
+                            <ul>
+                                <li>Cat</li>
+                                <li>Cat Financial</li>
+                                <li>Cat Reman</li>
+                                <li>Cat Rental Store</li>
+                                <li>Cat Lift Trucks</li>
+                            </ul>
+                            <ul>
+                                <li>Anchor</li>
+                                <li>AsiaTrak </li>
+                                <li>FG Wilson</li>
+                                <li>Hindustan</li>
+                                <li>MaK</li>
+                            </ul>
+                            <ul>
+                                <li>MWM</li>
+                                <li>Perkins</li>
+                                <li>Progress Rail</li>
+                                <li>SEM</li>
+                                <li>Solar Turbines</li>
+                            </ul>
+                            <ul>
+                                <li>SPM Oil & Gas</li>
+                                <li>Turner Powertrain Systems</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="dropdown-row3" id="dropdown-row3">
+                    <div class="drop-rocol">
+                        <h2>Investors</h2><br>
+                        <hr>
+                        <div class="drop-col3">
+                            <ul>
+                                <li>Stock Information</li>
+                                <li>Financial Information</li>
+                            </ul>
+                            <ul>
+                                <li>Shareholder Services</li>
+                                <li>Events & Presentations</li>
+                            </ul>
+                            <ul>
+                                <li>Quarterly Financial Results</li>
+                                <li>Caterpillar Reports</li>
+                            </ul>
+                            <ul>
+                                <li>SEC Filings</li>
+                                <li>Governance</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="search">
+                    <div class="inputbox">
+                        <input type="text" placeholder="search">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                    </div>
+
+                    <div class="addto-cat">
+                        <i class="fa-solid fa-cart-shopping"></i>
+                    </div>
+                </div>
+
+                <div id="productDetails">
+
+                </div>
+            </nav>
+        </div>
+    </section>
+
+    <section id="history-background">
+        <p>Our legacy</p>
+    </section>
+    <section id="history-section1">
+        <div id="history-header-container">
+            <h1>Hydro Tork Company History</h1>
+            <p>Enjoy the ingenious machines from our rich heritage, and more importantly, the people who founded and
+                built the company one breakthrough at a time.</p>
+            <p> with Benjamin Holt and C. L. Best, the people of Caterpillar have always been – and continue to be –
+                extraordinary.</p>
+        </div>
+    </section>
+    <section id="history-section2">
+        <div id="history-content-container">
+            <div id="history-content-row">
+                <div id="history-content-col1">
+                    <img src="images/firstgap.jpg" alt="error" width="550px" height="300px">
+                </div>
+                <div id="history-content-col2">
+                    <div class="content-para">
+                        <h2>Our History</h2>
+                        <p>Over the last century we’ve grown with our customers. We’ve changed together as the world has
+                            changed: creating, building, problem solving, innovating, testing, servicing and improving.
+                            When customers choose our products, services and solutions today, they also gain nearly 100
+                            years of experience and expertise. </p>
+                        <input type="button" class="history-btn1" value="EXPLORE OUR HISTORY">
+                    </div>
+                </div>
+                <div id="history-content-col3">
+                    <div class="content-para">
+                        <h2 class="content-head">A Glimpse Into Our Corporate Archives</h2>
+                        <p>Our Corporate Archives team has the important role of telling, preserving and showcasing
+                            Caterpillar’s history and the role our equipment, customers and people have played in
+                            projects around the world. </p>
+                        <input type="button" class="history-btn2" value="SEE THE ARCHIVES">
+                    </div>
+                </div>
+                <div id="history-content-col4">
+                    <img src="images/secondgap.jpg" alt="error" width="550px" height="300px">
+                </div>
+            </div>
+        </div>
+    </section>
+         <!-- ----------------------- footer------------------------- -->
+         <div class="footer">
+            <div class="footer-container">
+                <div class="row-footer">
+                    <div class="footer-col">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="">Strategy & Purpose</a></li>
+                            <li><a href="">Govemance</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Caterpillar Foundation</a></li>
+                            <li><a href="">Code of Conduct</a></li>
+                            <li><a href="">Sustainability</a></li>
+                            <li><a href="">Innovation</a></li>
+                            <li><a href="">Global Locations & Museum</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="">Strategy & Purpose</a></li>
+                            <li><a href="">Govemance</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Caterpillar Foundation</a></li>
+                            <li><a href="">Code of Conduct</a></li>
+                            <li><a href="">Sustainability</a></li>
+                            <li><a href="">Innovation</a></li>
+                            <li><a href="">Global Locations & Museum</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="">Strategy & Purpose</a></li>
+                            <li><a href="">Govemance</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Caterpillar Foundation</a></li>
+                            <li><a href="">Code of Conduct</a></li>
+                            <li><a href="">Sustainability</a></li>
+                            <li><a href="">Innovation</a></li>
+                            <li><a href="">Global Locations & Museum</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h5>Company</h5>
+                        <ul>
+                            <li><a href="">Strategy & Purpose</a></li>
+                            <li><a href="">Govemance</a></li>
+                            <li><a href="">History</a></li>
+                            <li><a href="">Caterpillar Foundation</a></li>
+                            <li><a href="">Code of Conduct</a></li>
+                            <li><a href="">Sustainability</a></li>
+                            <li><a href="">Innovation</a></li>
+                            <li><a href="">Global Locations & Museum</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-socialmedia">
+                    <ul>
+                        <li><img src="images/fb.svg" alt=""></li>
+                        <li><img src="images/in.svg" alt=""></li>
+                        <li><img src="images/x.svg" alt=""></li>
+                        <li><img src="images/youtube.svg" alt=""></li>
+                        <li><img src="images/insta.svg" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- -------------------------------------------- brand footer ------------------------------------------ -->
+        <div class="brand-footer">
+            <div class="brand-footer-container">
+                <div class="row-brand-footer">
+                    <div class="brand-footer-col">
+                        <h5>Caterpillar Brands</h5>
+                        <ul>
+                            <li><a href="">Cat</a></li>
+                            <li><a href="">Cat Financial</a></li>
+                            <li><a href="">Cat Reman</a></li>
+                            <li><a href="">The Cat Rental Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand-footer-col">
+                        <ul>
+                            <li><a href="">Cat</a></li>
+                            <li><a href="">Cat Financial</a></li>
+                            <li><a href="">Cat Reman</a></li>
+                            <li><a href="">The Cat Rental Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand-footer-col">
+                        <ul>
+                            <li><a href="">Cat</a></li>
+                            <li><a href="">Cat Financial</a></li>
+                            <li><a href="">Cat Reman</a></li>
+                            <li><a href="">The Cat Rental Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand-footer-col">
+                        <ul>
+                            <li><a href="">Cat</a></li>
+                            <li><a href="">Cat Financial</a></li>
+                            <li><a href="">Cat Reman</a></li>
+                            <li><a href="">The Cat Rental Store</a></li>
+                        </ul>
+                    </div>
+                    <div class="brand-footer-col">
+                        <ul>
+                            <li><a href="">Cat</a></li>
+                            <li><a href="">Cat Financial</a></li>
+                            <li><a href="">Cat Reman</a></li>
+                            <li><a href="">The Cat Rental Store</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="brand-footer-contact">
+                    <div class="footer-contact-col">
+                        <ul>
+                            <li><a href="">Home</a><span>|</span></li>
+                            <li><a href="">Site Map</a> <span>|</span></li>
+                            <li><a href="">Accessibility</a><span>|</span></li>
+                            <li><a href="">Cookie Settings</a><span>|</span></li>
+                            <li><a href="">Do Not Sell Or Share My Personal Information</a><span>|</span></li>
+                            <li><a href="">Legal</a><span>|</span></li>
+                            <li><a href="">Privacy</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact-col">
+                        <ul>
+                            <li><a href="">© 2024 Caterpillar. All Rights Reserved</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+        <!-- -------------------------------------------- brand footer ------------------------------------------ -->
+        <!-- <div class="website-bottom">
+            <p>Caterpillar Demonstrates Viability of Using Hydrogen Fuel Cell Technology. Caterpillar has collaborated
+                with Microsoft and Ballard Power Systems.</p>
+        </div> -->
+
+
+
+
+    <script>
+        const dropdownTrigger = document.querySelector('.dropdown-trigger');
+const dropdownRow = document.querySelector('.dropdown-row');
+
+
+dropdownTrigger.addEventListener('mouseover', function () {
+    dropdownRow.style.display = 'block';
+});
+
+dropdownRow.addEventListener('mouseover', function () {
+    dropdownRow.style.display = 'block';
+});
+
+dropdownTrigger.addEventListener('mouseout', function () {
+    dropdownRow.style.display = 'none';
+});
+
+dropdownRow.addEventListener('mouseout', function () {
+    dropdownRow.style.display = 'none';
+});
+const dropdownTrigger2 = document.querySelector('.dropdown-trigger2');
+const dropdownRow2 = document.querySelector('.dropdown-row2');
+
+dropdownTrigger2.addEventListener('mouseover', function () {
+    dropdownRow2.style.display = 'block';
+});
+
+dropdownTrigger2.addEventListener('mouseout', function () {
+    dropdownRow2.style.display = 'none';
+});
+
+dropdownRow2.addEventListener('mouseover', function () {
+    dropdownRow2.style.display = 'block';
+});
+
+dropdownRow2.addEventListener('mouseout', function () {
+    dropdownRow2.style.display = 'none';
+});
+const dropdownTrigger3 = document.querySelector('.dropdown-trigger3');
+const dropdownRow3 = document.querySelector('.dropdown-row3');
+
+dropdownTrigger3.addEventListener('mouseover', function () {
+    dropdownRow3.style.display = 'block';
+});
+
+dropdownTrigger3.addEventListener('mouseout', function () {
+    dropdownRow3.style.display = 'none';
+});
+
+dropdownRow3.addEventListener('mouseover', function () {
+    dropdownRow3.style.display = 'block';
+});
+
+dropdownRow3.addEventListener('mouseout', function () {
+    dropdownRow3.style.display = 'none';
+});
+const dropdownTrigger4 = document.querySelector('.dropdown-trigger4');
+const dropdownRow4 = document.querySelector('.dropdown-row4');
+
+dropdownTrigger4.addEventListener('mouseover', function () {
+    dropdownRow4.style.display = 'block';
+});
+
+dropdownTrigger4.addEventListener('mouseout', function () {
+    dropdownRow4.style.display = 'none';
+});
+
+dropdownRow4.addEventListener('mouseover', function () {
+    dropdownRow4.style.display = 'block';
+});
+
+dropdownRow4.addEventListener('mouseout', function () {
+    dropdownRow4.style.display = 'none';
+});
+const dropdownTrigger5 = document.querySelector('.dropdown-trigger5');
+const dropdownRow5 = document.querySelector('.dropdown-row5');
+
+dropdownTrigger5.addEventListener('mouseover', function () {
+    dropdownRow5.style.display = 'block';
+});
+
+dropdownTrigger5.addEventListener('mouseout', function () {
+    dropdownRow5.style.display = 'none';
+});
+
+dropdownRow5.addEventListener('mouseover', function () {
+    dropdownRow5.style.display = 'block';
+});
+
+dropdownRow5.addEventListener('mouseout', function () {
+    dropdownRow5.style.display = 'none';
+});
+    </script>
+
+    
+</body>
+
+</html>

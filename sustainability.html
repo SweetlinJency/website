@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sustainability</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .sustainability-banner-container {
+            width: 100%;
+            margin: auto;
+        }
+
+        .sustainability-banner-row img {
+            width: 100%;
+        }
+
+        .sustainability {
+            padding: 50px 0;
+        }
+
+        .sustainability-container {
+            width: 85%;
+            margin: auto;
+        }
+
+        .sustainability-row {
+            display: flex;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .sustainability-col {
+            width: 23%;
+            margin-top: 50px;
+            border: 1px solid rgb(204, 204, 203);
+            cursor: pointer;
+        }
+
+        .sustainability-col img {
+            border-bottom: 3px solid yellow;
+        }
+
+        .sustainability-col:hover {
+            box-shadow: 0px 0px 12px 2px rgb(194, 194, 191);
+        }
+
+        .sustainability-title {
+            font-size: 40px;
+            position: relative;
+        }
+
+        .sustainability-title::before {
+            content: "";
+            width: 50px;
+            height: 5px;
+            background-color: yellow;
+            top: 50px;
+            left: 0px;
+            position: absolute;
+        }
+
+        .sustainability-content {
+            font-size: 20px;
+            padding-top: 40px;
+        }
+
+        .sustainability-para-h3 {
+            /* font-size: 24px; */
+            padding-bottom: 10px;
+            cursor: pointer;
+            transition: text-decoration 0.3s;
+        }
+
+        .sustainability-para {
+            padding: 25px;
+        }
+        .action-container{
+            width:90% ;
+            margin: 60px;
+        }
+        .action-row{
+            display:flex;
+        }
+        .action-col{
+            width: 33%;
+        }
+        
+        .action-box{
+
+            margin: 20px 10px ;
+            border-radius: 2px;
+            border:1px solid silver;
+            justify-content: center;
+            height: 400px;
+            
+    }
+    .heading{
+        margin-left: 20px;
+    }
+    .para{
+        margin-left: 20px;
+    }
+    .head{
+        margin-left: 20px;
+    }
+
+
+    /* -------------------------footer------------------------ */
+.footer {
+    background-color: #CCCCCC;
+    padding: 70px 0px 50px 0px;
+    border-bottom: 5px solid #FFCD11;
+}
+
+.footer-container {
+    width: 85%;
+    margin: auto;
+}
+
+.row-footer {
+    display: flex;
+    gap: 70px;
+}
+
+.footer-col {
+    width: 20%;
+    line-height: 1.8;
+}
+
+.footer-col ul li {
+    list-style-type: none;
+}
+
+.footer-col ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-socialmedia {
+    margin-top: 120px;
+}
+
+.footer-socialmedia ul {
+    display: flex;
+    gap: 40px;
+}
+
+.footer-socialmedia ul li {
+    list-style-type: none;
+}
+
+.footer-socialmedia ul li img {
+    width: 20px;
+}
+
+@media (min-width:320px) {
+    .footer {
+        display: none;
+    }
+
+    .brand-footer {
+        display: none;
+    }
+}
+
+@media (min-width:760px) {
+    .footer {
+        display: block;
+    }
+
+    .brand-footer {
+        display: block;
+    }
+}
+
+@media (min-width:1020px) {
+    .footer {
+        display: block;
+    }
+
+    .brand-footer {
+        display: block;
+    }
+}
+
+/* ---------------------------------home brand footer------------------------------------- */
+.brand-footer {
+    background-color: #F0F0F0;
+    padding-top: 70px;
+}
+
+.brand-footer-container {
+    width: 85%;
+    margin: auto;
+}
+
+.row-brand-footer {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid grey;
+}
+
+.brand-footer-col {
+    width: 30%;
+    line-height: 2;
+}
+
+.brand-footer-col ul li {
+    list-style-type: none;
+}
+
+.brand-footer-col ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.brand-footer-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.brand-footer-contact {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0px 50px 0px;
+    font-size: 13px;
+}
+
+.footer-contact-col ul {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-contact-col ul li {
+    list-style-type: none;
+}
+
+.footer-contact-col ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-contact-col ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-contact-col ul li span {
+    margin-left: 10px;
+}
+.found-img1{
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+        /* CSS animation for the who-col elements when they come into view */
+        .found-img1[data-aos^='fade-'][data-aos$='up'] {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .found-img1[data-aos^='fade-'][data-aos$='down'] {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- -------------banner section------------- -->
+    <section class="sustainability-banner">
+        <div class="sustainability-banner-container">
+            <div class="sustainability-banner-row">
+                <img src="images/sustainability-banner.jpg" alt="">
+            </div>
+        </div>
+    </section>
+    <section class="sustainability">
+        <div class="sustainability-container">
+            <h1 class="sustainability-title">Sustainability</h1>
+            <p class="sustainability-content">Hydro Tork Manufacturing prioritizes sustainability by implementing
+                efficient water usage, renewable
+                energy sources, and eco-friendly materials in its production processes, reducing environmental impact
+                while maintaining high-quality output. Through innovative technologies and responsible practices, it
+                strives to minimize its carbon footprint and contribute positively to a greener future.
+            </p>
+            <div class="sustainability-row">
+                <div class="sustainability-col"  data-aos="fade-up">
+                    <div class="sustainability-img">
+                        <img src="images/sus3.jpg" alt="" width="260px">
+                    </div>
+                    <div class="sustainability-para">
+                        <h3 class="sustainability-para-h3">Sustainability report</h3>
+                        <p class="sustainability-para-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+                            ipsum
+                            dolor sit amet
+                            consectetur, adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="sustainability-col">
+                    <div class="sustainability-img">
+                        <img src="images/sus3.jpg" alt="" width="260px">
+                    </div>
+                    <div class="sustainability-para">
+                        <h3 class="sustainability-para-h3">Climate & Energy</h3>
+                        <p class="sustainability-para-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+                            ipsum
+                            dolor sit amet
+                            consectetur, adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="sustainability-col">
+                    <div class="sustainability-img">
+                        <img src="images/sus3.jpg" alt="" width="260px">
+                    </div>
+                    <div class="sustainability-para">
+                        <h3 class="sustainability-para-h3">2030 Sustainability Goals</h3>
+                        <p class="sustainability-para-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+                            ipsum
+                            dolor sit amet
+                            consectetur, adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+                <div class="sustainability-col">
+                    <div class="sustainability-img">
+                        <img src="images/sus3.jpg" alt="" width="260px">
+                    </div>
+                    <div class="sustainability-para">
+                        <h3 class="sustainability-para-h3"> Suppoting Our Customers</h3>
+                        <p class="sustainability-para-p">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem
+                            ipsum
+                            dolor sit amet
+                            consectetur, adipisicing elit.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="action-container">
+            <div class="action-row">
+                <div class="action-col">
+                    <div class="action-box">
+                        <div class="action-img">
+                        <img src="images/caterpille1r.img" height="180px"width="379px"><br><br>
+                        </div>
+                      <h2 class="heading">The Many Lifecycles Of A Cat Reman Component </h2><br><br>
+                      <p class="para">Follow A component Through The Cat Reman Process to see how it is transformed. </p><br><br>
+                      <h4 class="head">fullstory></h4>
+                    </div>
+                </div>
+                <div class="action-col">
+                    <div class="action-box">
+                        <div class="action-img">
+                        <img src="images/caterpiller2.jpg"height="180px"width="379px"><br><br>
+                        </div>
+                        <h2 class="heading">Caterpillar Named To Barron's List Of 100 Most Sustainable U.S. Companies</h2><br>
+                        <p class="para">caterpillar was recently named to Barron's 100 most sustainable U.S. companies list for the first time recognixing our contr...</p><br>
+                        <h4 class="head">full story></h4>
+                    </div>
+                </div>
+                <div class="action-col">
+                    <div class="action-box">
+                        <div class="action-img">
+                        <img src="images/caterpiller3.jpg"height="180px"width="379px"><br><br>
+                        </div>
+                        <h2 class="heading">Caterpiller Expands Construction Industies Portfolio With Four Battery Electric Machines </h2><br>
+                        <p class="para">To support customers during the energy transition to a lower-carbon future,caterpillar (NYSE:CAT)will display four electric...</p><br>
+                        <h4 class="head">view release></h4>
+                    </div> 
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ----------------------- footer------------------------- -->
+    <div class="footer">
+        <div class="footer-container">
+            <div class="row-footer">
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="">Strategy & Purpose</a></li>
+                        <li><a href="">Govemance</a></li>
+                        <li><a href="">History</a></li>
+                        <li><a href="">Caterpillar Foundation</a></li>
+                        <li><a href="">Code of Conduct</a></li>
+                        <li><a href="">Sustainability</a></li>
+                        <li><a href="">Innovation</a></li>
+                        <li><a href="">Global Locations & Museum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="">Strategy & Purpose</a></li>
+                        <li><a href="">Govemance</a></li>
+                        <li><a href="">History</a></li>
+                        <li><a href="">Caterpillar Foundation</a></li>
+                        <li><a href="">Code of Conduct</a></li>
+                        <li><a href="">Sustainability</a></li>
+                        <li><a href="">Innovation</a></li>
+                        <li><a href="">Global Locations & Museum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="">Strategy & Purpose</a></li>
+                        <li><a href="">Govemance</a></li>
+                        <li><a href="">History</a></li>
+                        <li><a href="">Caterpillar Foundation</a></li>
+                        <li><a href="">Code of Conduct</a></li>
+                        <li><a href="">Sustainability</a></li>
+                        <li><a href="">Innovation</a></li>
+                        <li><a href="">Global Locations & Museum</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Company</h5>
+                    <ul>
+                        <li><a href="">Strategy & Purpose</a></li>
+                        <li><a href="">Govemance</a></li>
+                        <li><a href="">History</a></li>
+                        <li><a href="">Caterpillar Foundation</a></li>
+                        <li><a href="">Code of Conduct</a></li>
+                        <li><a href="">Sustainability</a></li>
+                        <li><a href="">Innovation</a></li>
+                        <li><a href="">Global Locations & Museum</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-socialmedia">
+                <ul>
+                    <li><img src="images/fb.svg" alt=""></li>
+                    <li><img src="images/in.svg" alt=""></li>
+                    <li><img src="images/x.svg" alt=""></li>
+                    <li><img src="images/youtube.svg" alt=""></li>
+                    <li><img src="images/insta.svg" alt=""></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------------------- brand footer ------------------------------------------ -->
+    <div class="brand-footer">
+        <div class="brand-footer-container">
+            <div class="row-brand-footer">
+                <div class="brand-footer-col">
+                    <h5>Caterpillar Brands</h5>
+                    <ul>
+                        <li><a href="">Cat</a></li>
+                        <li><a href="">Cat Financial</a></li>
+                        <li><a href="">Cat Reman</a></li>
+                        <li><a href="">The Cat Rental Store</a></li>
+                    </ul>
+                </div>
+                <div class="brand-footer-col">
+                    <ul>
+                        <li><a href="">Cat</a></li>
+                        <li><a href="">Cat Financial</a></li>
+                        <li><a href="">Cat Reman</a></li>
+                        <li><a href="">The Cat Rental Store</a></li>
+                    </ul>
+                </div>
+                <div class="brand-footer-col">
+                    <ul>
+                        <li><a href="">Cat</a></li>
+                        <li><a href="">Cat Financial</a></li>
+                        <li><a href="">Cat Reman</a></li>
+                        <li><a href="">The Cat Rental Store</a></li>
+                    </ul>
+                </div>
+                <div class="brand-footer-col">
+                    <ul>
+                        <li><a href="">Cat</a></li>
+                        <li><a href="">Cat Financial</a></li>
+                        <li><a href="">Cat Reman</a></li>
+                        <li><a href="">The Cat Rental Store</a></li>
+                    </ul>
+                </div>
+                <div class="brand-footer-col">
+                    <ul>
+                        <li><a href="">Cat</a></li>
+                        <li><a href="">Cat Financial</a></li>
+                        <li><a href="">Cat Reman</a></li>
+                        <li><a href="">The Cat Rental Store</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="brand-footer-contact">
+                <div class="footer-contact-col">
+                    <ul>
+                        <li><a href="">Home</a><span>|</span></li>
+                        <li><a href="">Site Map</a> <span>|</span></li>
+                        <li><a href="">Accessibility</a><span>|</span></li>
+                        <li><a href="">Cookie Settings</a><span>|</span></li>
+                        <li><a href="">Do Not Sell Or Share My Personal Information</a><span>|</span></li>
+                        <li><a href="">Legal</a><span>|</span></li>
+                        <li><a href="">Privacy</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact-col">
+                    <ul>
+                        <li><a href="">© 2024 Caterpillar. All Rights Reserved</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- -------------------------------------------- brand footer ------------------------------------------ -->
+    <!-- <div class="website-bottom">
+        <p>Caterpillar Demonstrates Viability of Using Hydrogen Fuel Cell Technology. Caterpillar has collaborated
+            with Microsoft and Ballard Power Systems.</p>
+    </div> -->
+
+
+    <script src="main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        // Initialize AOS library
+        AOS.init({
+            duration: 1000, // Duration of animation
+            once: true, // Animation occurs only once
+            // Additional options if needed
+        });
+    </script>
+</body>I
+
+</html>
